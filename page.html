@@ -1,0 +1,220 @@
+<title>학점일보 고교학점제 기사</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;800&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* Layout: 모바일 포털 뉴스 — 상단 마스트헤드, 단일 기사 칼럼, 기사 사이 광고, 하단 댓글·다음 글 */
+:root{
+  --bg:#f6f7f9; --paper:#ffffff; --fg:#1b1f27; --muted:#667085; --line:#e3e6eb;
+  --brand:#1f4fd1; --brand-ink:#ffffff; --hot:#d93a2b; --ad:#fff8e1; --ad-line:#f0d98c; --chip:#eef2fb;
+  --serif:"Noto Serif KR", "Nanum Myeongjo", serif;
+  --sans:"Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1218; --paper:#171b23; --fg:#e7eaf0; --muted:#98a2b3; --line:#2a303b;
+  --brand:#6f95ff; --brand-ink:#0f1218; --hot:#ff7a6b; --ad:#2a2414; --ad-line:#5a4b1e; --chip:#1f2635; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --paper:#171b23; --fg:#e7eaf0; --muted:#98a2b3; --line:#2a303b;
+  --brand:#6f95ff; --brand-ink:#0f1218; --hot:#ff7a6b; --ad:#2a2414; --ad-line:#5a4b1e; --chip:#1f2635; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.75;margin:0}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.mast{background:var(--brand);color:var(--brand-ink)}
+header.mast .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:12px;gap:12px}
+.logo{font-family:var(--serif);font-weight:800;font-size:22px;letter-spacing:-.5px}
+.logo small{font-family:var(--sans);font-weight:500;font-size:11px;opacity:.85;margin-left:6px;letter-spacing:.5px}
+.mast-date{font-size:12px;opacity:.9}
+nav.sec{background:var(--paper);border-bottom:1px solid var(--line);overflow-x:auto}
+nav.sec .wrap{display:flex;gap:18px;padding-block:10px;font-size:14px;white-space:nowrap}
+nav.sec span.on{color:var(--brand);font-weight:700}
+.notice{background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:13px;color:var(--muted);margin-top:16px}
+.notice b{color:var(--hot)}
+article{background:var(--paper);border:1px solid var(--line);border-radius:10px;margin-top:14px;padding:22px 18px}
+.kicker{display:inline-block;font-size:12px;font-weight:700;color:var(--brand);letter-spacing:.5px}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(23px,5.6vw,31px);line-height:1.38;margin:8px 0 12px;text-wrap:balance;letter-spacing:-.5px}
+.deck{border-left:3px solid var(--brand);padding-left:12px;margin:0 0 16px;color:var(--muted);font-size:15px;line-height:1.6}
+.deck p{margin:2px 0}
+.byline{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted);padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:18px}
+article p{margin:0 0 16px}
+article h2{font-family:var(--serif);font-size:19px;margin:26px 0 10px}
+.fig{border:1px solid var(--line);border-radius:8px;padding:14px;margin:6px 0 20px}
+.fig h3{font-size:14px;margin:0 0 12px}
+.bar-row{display:grid;grid-template-columns:44px 1fr 56px;gap:8px;align-items:center;font-size:13px;margin:6px 0}
+.bar{height:14px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--brand)}
+.bar i.s{background:var(--hot)}
+.bar-row b{font-variant-numeric:tabular-nums;text-align:right}
+.figcap{font-size:12px;color:var(--muted);margin-top:8px}
+.quote{background:var(--chip);border-radius:8px;padding:12px 14px;font-size:15px;margin:0 0 16px}
+.ad{background:var(--ad);border:1px dashed var(--ad-line);border-radius:8px;padding:12px 14px;margin:18px 0;font-size:14px;display:flex;gap:12px;align-items:center}
+.ad .tag{font-size:10px;font-weight:700;border:1px solid var(--ad-line);border-radius:3px;padding:0 5px;color:var(--muted);flex:none}
+.ad strong{display:block}
+.ad span.sub{color:var(--muted);font-size:12px}
+.src{border-top:1px solid var(--line);margin-top:22px;padding-top:14px;font-size:13px;color:var(--muted)}
+.src h4{margin:0 0 6px;font-size:13px;color:var(--fg)}
+.src ol{margin:0;padding-left:18px}
+.src a{color:var(--brand);word-break:break-all}
+.react{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.react button{font:inherit;font-size:13px;background:var(--paper);color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
+.react button[aria-pressed="true"]{border-color:var(--brand);color:var(--brand);font-weight:700}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+section.box{background:var(--paper);border:1px solid var(--line);border-radius:10px;margin-top:14px;padding:18px}
+section.box h2{font-size:16px;margin:0 0 12px;display:flex;justify-content:space-between;align-items:baseline}
+section.box h2 small{font-weight:400;color:var(--muted);font-size:12px}
+.cform{display:flex;gap:8px;margin-bottom:14px}
+.cform textarea{flex:1;min-width:0;font:inherit;font-size:14px;border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:var(--bg);color:var(--fg);resize:vertical;min-height:44px}
+.cform button{font:inherit;font-size:14px;font-weight:700;background:var(--brand);color:var(--brand-ink);border:0;border-radius:8px;padding:0 14px;cursor:pointer}
+.cmt{border-top:1px solid var(--line);padding:12px 0}
+.cmt .who{font-size:13px;font-weight:700}
+.cmt .who span{font-weight:400;color:var(--muted);margin-left:6px}
+.cmt p{margin:4px 0 8px;font-size:15px}
+.cmt .acts{display:flex;gap:14px;font-size:12px;color:var(--muted)}
+.cmt .acts button{font:inherit;background:none;border:0;color:inherit;cursor:pointer;padding:0}
+.cmt .acts button[aria-pressed="true"]{color:var(--brand);font-weight:700}
+.best{font-size:10px;font-weight:700;color:var(--hot);border:1px solid var(--hot);border-radius:3px;padding:0 4px;margin-right:6px}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:flex;gap:10px;padding:10px 0;border-top:1px solid var(--line);font-size:15px;line-height:1.5}
+.list li:first-child{border-top:0}
+.list .n{color:var(--brand);font-weight:700;font-variant-numeric:tabular-nums;flex:none;width:18px}
+.list .tagx{font-size:11px;color:var(--muted);display:block}
+footer{color:var(--muted);font-size:12px;text-align:center;padding-block:24px 32px}
+.item{border-top:1px solid var(--line);padding-top:14px;margin-top:14px}
+.item:first-of-type{border-top:0}
+.item h2{font-family:var(--sans);font-size:17px;margin:0 0 8px;color:var(--brand)}
+.item dl{margin:0;display:grid;grid-template-columns:78px 1fr;gap:6px 10px;font-size:15px;line-height:1.65}
+.item dt{font-weight:700;color:var(--muted);font-size:13px;padding-top:2px}
+.item dd{margin:0;min-width:0}
+.srcd a{color:var(--brand);word-break:break-all}
+@media (max-width:420px){.item dl{grid-template-columns:1fr;gap:2px}.item dd{margin-bottom:8px}}
+</style>
+
+<header class="mast"><div class="wrap">
+  <div class="logo">학점일보<small>STUDY EDITION</small></div>
+  <div class="mast-date">2026. 11. 10.(화)</div>
+</div></header>
+<nav class="sec" aria-label="섹션"><div class="wrap">
+  <span>홈</span><span class="on">교육</span><span>입시</span><span>학교생활</span><span>오피니언</span><span>데이터</span>
+</div></nav>
+
+<main class="wrap">
+  <div class="notice"><b>가상 기사</b> · 독서와 작문 수행평가 준비용으로 만든 정리 페이지입니다. 실제 언론사 기사가 아니며 인용 출처로 쓸 수 없습니다. 출처는 맨 아래 원문을 쓰세요.</div>
+
+  <article>
+    <span class="kicker">교육 · 고교학점제 근거 자료</span>
+    <h1>문제 3. 근거 적절성 평가</h1>
+    <div class="byline"><span>독서와 작문 2차 수행 · 2차시</span><span>자료 6개</span></div>
+    <div class="item"><h2>자료 1</h2><dl>
+      <dt>내용</dt><dd>과목 선택 요인으로 진로 70.7%, 내신 유불리 45.0%</dd>
+      <dt>매체</dt><dd>설문 통계</dd>
+      <dt>출처</dt><dd class="srcd">교원 3단체, 고등학생 1,670명 대상 설문조사, 2025 (제시문 (나) 재인용)</dd>
+      <dt>적절성 평가</dt><dd>표본이 크고 수치가 구체적이라 타당성이 높다. 다만 조사 주체가 교원단체라 공정성에 한계가 있다.</dd>
+    </dl></div>
+    <div class="item"><h2>자료 2</h2><dl>
+      <dt>내용</dt><dd>일반고 평균 개설 과목 28.6개, 소규모교는 25.8개, 인천은 10.5개 차이</dd>
+      <dt>매체</dt><dd>공공 통계</dd>
+      <dt>출처</dt><dd class="srcd">교육부, 국회 제출 자료, 2026 (제시문 (나) 재인용)</dd>
+      <dt>적절성 평가</dt><dd>정부 공식 통계이고 최신 자료라 신뢰도가 높다. 학교 간 격차를 수치로 직접 보여준다.</dd>
+    </dl></div>
+    <div class="item"><h2>자료 3</h2><dl>
+      <dt>내용</dt><dd>"원하는 과목이 충분히 개설됨"에 학생 58.3%, 교사 79.1% 긍정</dd>
+      <dt>매체</dt><dd>설문 통계</dd>
+      <dt>출처</dt><dd class="srcd">한국교육과정평가원, 고교학점제 교육과정 영역 인식 조사, 2025 (제시문 (다)①)</dd>
+      <dt>적절성 평가</dt><dd>국가 연구기관의 대규모 조사(11,513명)라 공정성이 높다. 같은 조사의 "자유롭게 선택" 문항은 학생 긍정이 74.4%이므로, 이 문항만 골라 쓰면 논리성이 약해진다. 두 문항을 함께 다뤄야 한다.</dd>
+    </dl></div>
+    <div class="ad" role="note"><span class="tag">AD</span><div><strong>내신 5등급 계산기, 아직도 손으로?</strong><span class="sub">등급컷 걱정은 공부로 해결하세요 · 학점일보 스터디랩</span></div></div>
+    <div class="item"><h2>자료 4</h2><dl>
+      <dt>내용</dt><dd>교원노조가 고교학점제 폐지를 요구함</dd>
+      <dt>매체</dt><dd>방송 기사</dd>
+      <dt>출처</dt><dd class="srcd">KBS 뉴스, 2025.9.19. (제시문 (다)③)</dd>
+      <dt>적절성 평가</dt><dd>이해당사자의 주장이라 공정성이 낮다. 근거로 쓰지 않고, 현장의 반발이 있다는 사실을 보여주는 정도로만 쓴다.</dd>
+    </dl></div>
+    <div class="item"><h2>자료 5 [추가]</h2><dl>
+      <dt>내용</dt><dd>고교 내신을 9등급제에서 5등급제로 바꾸고, 과목별로 절대평가와 상대평가 성적을 함께 기재한다. 사회·과학 교과 9개 과목만 상대평가 등급을 적지 않는다. 교육부는 이 개편으로 학생의 경쟁 부담과 사교육 수요가 줄 것으로 기대한다.</dd>
+      <dt>매체</dt><dd>정부 보도자료</dd>
+      <dt>출처</dt><dd class="srcd">교육부, 「2028 입시부터 국어·수학·사회·과학 선택과목 없는 통합형 수능, 내신 5등급 체제 확정」, 교육부, 2023.12.27., <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=246533" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=246533</a></dd>
+      <dt>적절성 평가</dt><dd>제도를 확정한 기관의 1차 자료라 사실 정보로서 신뢰도가 가장 높다. 다만 정책 홍보 성격이 있어 제도의 한계는 다루지 않는다. 경쟁 부담이 줄 것이라는 전망은 검증된 결과가 아니라 정부 측 기대이므로 비판적으로 받아들여야 한다. 대부분의 과목에 상대평가가 남아 있다는 점은 입시가 과목 선택에 영향을 준다는 주장의 근거가 된다.</dd>
+    </dl></div>
+    <div class="item"><h2>자료 6 [추가]</h2><dl>
+      <dt>내용</dt><dd>상대평가와 절대평가가 함께 운영되면서 과목 선택권 보장이라는 취지가 약해질 수 있다는 교육계의 우려. 2025년 고1부터 5등급제가 적용되며, 1등급 비율은 4%에서 10%로 늘어난다.</dd>
+      <dt>매체</dt><dd>인터넷 기사</dd>
+      <dt>출처</dt><dd class="srcd">뉴시스, 「올해 신입생부터 고교 현장 격변…1등급 4→10%」, 2025.1.3., <a href="https://www.newsis.com/view/NISX20250102_0003019022" target="_blank" rel="noopener">https://www.newsis.com/view/NISX20250102_0003019022</a></dd>
+      <dt>적절성 평가</dt><dd>교육부 발표를 토대로 한 보도라 사실 부분은 정확하다. 우려는 "교육계" 전체로 뭉뚱그려져 있어 근거로서의 구체성이 부족하다.</dd>
+    </dl></div>
+    <div class="react" aria-label="기사 반응">
+      <button type="button" id="r1" aria-pressed="false" data-n="128">👍 좋아요 <span>128</span></button>
+      <button type="button" id="r2" aria-pressed="false" data-n="342">😮 공감돼요 <span>342</span></button>
+      <button type="button" id="r3" aria-pressed="false" data-n="57">🤔 생각해볼게요 <span>57</span></button>
+    </div>
+  </article>
+
+  <section class="box" aria-labelledby="ch">
+    <h2 id="ch">댓글 <small id="ccount">4개</small></h2>
+    <form class="cform" id="cform">
+      <textarea id="ctext" placeholder="나만의 관점을 남겨 보세요 (이 기기에서만 보여요)" maxlength="300"></textarea>
+      <button type="submit">등록</button>
+    </form>
+    <div id="clist">
+      <div class="cmt"><div class="who"><span class="best">BEST</span>등급컷무서워<span>3시간 전</span></div><p>진로는 수학교육인데 기하 들으면 내신 망할까 봐 고민한 게 나만이 아니었구나… 45%면 거의 절반이네요</p><div class="acts"><button type="button" aria-pressed="false" data-n="211">추천 <span>211</span></button><span>답글 12</span></div></div>
+      <div class="cmt"><div class="who"><span class="best">BEST</span>공강의신<span>2시간 전</span></div><p>74.4%가 자유롭게 고른다는데, 메뉴판에 없는 건 주문 못 하잖아요. 58.3%가 진짜 숫자인 듯</p><div class="acts"><button type="button" aria-pressed="false" data-n="187">추천 <span>187</span></button><span>답글 5</span></div></div>
+      <div class="cmt"><div class="who">반론담당<span>1시간 전</span></div><p>그래도 사회·과학 융합선택은 절대평가잖아요. 아예 안 바뀐 건 아님</p><div class="acts"><button type="button" aria-pressed="false" data-n="64">추천 <span>64</span></button><span>답글 9</span></div></div>
+      <div class="cmt"><div class="who">↳ 재반박러<span>48분 전</span></div><p>9개 과목뿐이고 나머지는 다 상대평가예요. 부담은 그대로</p><div class="acts"><button type="button" aria-pressed="false" data-n="98">추천 <span>98</span></button><span>답글 0</span></div></div>
+    </div>
+  </section>
+
+  <section class="box" aria-labelledby="nx">
+    <h2 id="nx">다음 글</h2>
+    <ul class="list">
+      <li><span class="n">1</span><div>소규모 학교 공동교육과정, 이동 시간은 누가 보상하나<span class="tagx">교육 · 가상 기사</span></div></li>
+      <li><span class="n">2</span><div>내신 1등급 10% 시대, '올 1등급'의 의미가 달라졌다<span class="tagx">입시 · 가상 기사</span></div></li>
+      <li><span class="n">3</span><div>교사 79% vs 학생 58%, 같은 학교 다른 체감<span class="tagx">데이터 · 가상 기사</span></div></li>
+    </ul>
+  </section>
+
+  <div class="ad" role="note"><span class="tag">AD</span><div><strong>논증 4요소, 외웠나요?</strong><span class="sub">주장 · 근거 · 예상 반론 · 반박 · 오늘의 한 줄 복습</span></div></div>
+
+  <section class="box" aria-labelledby="pop">
+    <h2 id="pop">많이 본 뉴스</h2>
+    <ul class="list">
+      <li><span class="n">1</span><div>"과목만 많으면 무슨 소용" 교사들 정부청사 앞 피켓 시위</div></li>
+      <li><span class="n">2</span><div>2028 수능, 문·이과 구분 없이 통합사회·통합과학 응시</div></li>
+      <li><span class="n">3</span><div>수행평가 AI 금지령… 구글 문서 창 벗어나면 안 돼</div></li>
+      <li><span class="n">4</span><div>독서와 작문 서론-본론-결론, 단락 구분이 채점 포인트</div></li>
+    </ul>
+  </section>
+</main>
+
+<footer>© 학점일보 STUDY EDITION · 학습용 가상 매체입니다</footer>
+
+<script>
+function toggle(btn){
+  var on = btn.getAttribute('aria-pressed') === 'true';
+  var n = parseInt(btn.dataset.n,10) + (on ? 0 : 1);
+  btn.setAttribute('aria-pressed', on ? 'false' : 'true');
+  btn.querySelector('span').textContent = on ? btn.dataset.n : n;
+}
+document.addEventListener('click', function(e){
+  var b = e.target.closest('.react button, .cmt .acts button');
+  if (b) toggle(b);
+});
+var KEY='hakjum-comments';
+function load(){ try{ return JSON.parse(localStorage.getItem(KEY)||'[]'); }catch(e){ return []; } }
+function save(a){ try{ localStorage.setItem(KEY, JSON.stringify(a)); }catch(e){} }
+function render(t){
+  var d=document.createElement('div'); d.className='cmt';
+  var w=document.createElement('div'); w.className='who'; w.textContent='나';
+  var s=document.createElement('span'); s.textContent='방금 전'; w.appendChild(s);
+  var p=document.createElement('p'); p.textContent=t;
+  var a=document.createElement('div'); a.className='acts';
+  a.innerHTML='<button type="button" aria-pressed="false" data-n="0">추천 <span>0</span></button><span>답글 0</span>';
+  d.appendChild(w); d.appendChild(p); d.appendChild(a);
+  document.getElementById('clist').appendChild(d);
+}
+var mine=load(); mine.forEach(render);
+function count(){ document.getElementById('ccount').textContent=(4+mine.length)+'개'; }
+count();
+document.getElementById('cform').addEventListener('submit', function(e){
+  e.preventDefault();
+  var ta=document.getElementById('ctext'); var t=ta.value.trim(); if(!t) return;
+  mine.push(t); save(mine); render(t); ta.value=''; count();
+});
+</script>
