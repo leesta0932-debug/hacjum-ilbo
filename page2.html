@@ -1,0 +1,252 @@
+<title>학점일보 고교학점제 기사</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: 국내 신문사 모바일 웹 — 유틸바·로고·GNB, 기사 본문, 배너 광고, 댓글, 랭킹. 의도적으로 라이트 단일 테마 */
+:root{--bg:#fff;--fg:#111;--sub:#555;--mute:#888;--line:#ddd;--line2:#eee;--red:#c8102e;--navy:#0d2c54;--gray:#f4f4f4;color-scheme:light}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:"Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",Dotum,sans-serif;font-size:15px;line-height:1.6;margin:0;letter-spacing:-.3px}
+a{color:inherit;text-decoration:none}
+.in{max-width:760px;margin:0 auto;padding-left:max(14px,env(safe-area-inset-left,0px));padding-right:max(14px,env(safe-area-inset-right,0px))}
+.util{background:var(--gray);border-bottom:1px solid var(--line2);font-size:11px;color:var(--mute)}
+.util .in{display:flex;justify-content:space-between;padding-block:5px}
+.util span+span{margin-left:10px}
+.top .in{display:flex;align-items:flex-end;justify-content:space-between;padding-block:10px 8px}
+.logo{font-family:"Batang","바탕","Nanum Myeongjo",serif;font-weight:900;font-size:30px;color:var(--navy);letter-spacing:-2px;line-height:1}
+.logo b{color:var(--red)}
+.top .r{font-size:11px;color:var(--sub);text-align:right}
+.gnb{background:var(--navy);color:#fff;overflow-x:auto;position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--navy)}
+.gnb .in{display:flex;font-size:14px;font-weight:700;white-space:nowrap}
+.gnb span{padding:9px 11px}
+.gnb span.on{background:var(--red)}
+.crumb{font-size:12px;color:var(--mute);padding-block:12px 0}
+.crumb b{color:var(--red);font-weight:700}
+h1{font-size:24px;line-height:1.38;margin:8px 0 10px;font-weight:800;letter-spacing:-1px}
+.subt{margin:0 0 12px;padding:2px 0 2px 10px;border-left:3px solid var(--line);font-size:15px;font-weight:700;color:#333;line-height:1.55}
+.meta{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;font-size:12px;color:var(--mute);border-top:1px solid #222;border-bottom:1px solid var(--line);padding:8px 0}
+.meta .tools{display:flex;gap:4px}
+.meta .tools button{font:inherit;font-size:12px;width:28px;height:26px;border:1px solid var(--line);background:#fff;color:var(--sub);cursor:pointer;padding:0}
+.warn{font-size:12px;color:var(--mute);margin:10px 0 0}
+#body{font-size:17px;line-height:1.85;padding-block:18px 6px}
+#body.s{font-size:15px}#body.l{font-size:19px}
+#body p{margin:0 0 20px}
+.blk{margin:0 0 26px}
+.blk h3{font-size:1em;margin:0 0 6px;font-weight:800}
+.blk p{margin:0 0 4px!important;padding-left:1em;text-indent:-1em}
+.blk a{color:#1a55b8;word-break:break-all;text-decoration:underline}
+.part{font-size:15px;font-weight:800;color:#fff;background:var(--navy);display:inline-block;padding:3px 10px;margin:6px 0 16px}
+.mid-ad{border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);padding:10px 0;margin:6px 0 26px;text-align:center}
+.mid-ad .lbl{font-size:10px;color:#aaa;text-align:left;margin-bottom:4px}
+.bn{display:flex;align-items:center;justify-content:space-between;gap:10px;height:76px;padding:0 16px;color:#fff;text-align:left;overflow:hidden}
+.bn1{background:linear-gradient(100deg,#0b6b4f 0 62%,#f2c230 62%)}
+.bn1 strong{font-size:17px;line-height:1.25}
+.bn1 em{font-style:normal;background:#111;color:#f2c230;font-weight:800;font-size:13px;padding:6px 10px;flex:none}
+.bn2{background:#f4ede1;color:#4a2c10;border:1px solid #e3d6bf}
+.bn2 strong{font-size:16px}
+.bn2 small{display:block;font-size:12px;color:#8a6a45}
+.bn2 i{font-style:normal;font-weight:900;font-size:26px;color:#c8102e;flex:none}
+.byend{font-size:13px;color:var(--sub);padding:4px 0 14px}
+.copy{font-size:12px;color:var(--mute);border-top:1px solid var(--line2);padding-top:10px}
+.share{display:flex;gap:6px;margin:14px 0}
+.share span{flex:1;text-align:center;font-size:12px;border:1px solid var(--line);padding:7px 0;color:var(--sub)}
+.likes{display:flex;justify-content:center;gap:8px;margin:18px 0 26px}
+.likes button{font:inherit;font-size:13px;border:1px solid var(--line);background:#fff;color:#333;padding:8px 16px;cursor:pointer;border-radius:20px}
+.likes button[aria-pressed="true"]{border-color:var(--red);color:var(--red);font-weight:700}
+.sec{border-top:2px solid #222;padding-top:10px;margin-top:8px}
+.sec h2{font-size:17px;margin:0 0 8px;font-weight:800}
+.sec h2 b{color:var(--red)}
+.sort{font-size:12px;color:var(--mute);margin-bottom:8px}
+.sort b{color:#222}
+.cin{display:flex;border:1px solid #bbb;margin-bottom:6px}
+.cin textarea{flex:1;min-width:0;border:0;font:inherit;font-size:14px;padding:10px;resize:none;height:60px;color:#111;background:#fff}
+.cin button{font:inherit;font-size:13px;font-weight:700;border:0;border-left:1px solid #bbb;background:#f7f7f7;color:#333;padding:0 14px;cursor:pointer}
+.chint{font-size:11px;color:var(--mute);margin-bottom:6px}
+.c{border-bottom:1px solid var(--line2);padding:12px 0}
+.c .w{font-size:13px;font-weight:700}
+.c .w span{font-weight:400;color:#aaa;font-size:12px;margin-left:6px}
+.c p{margin:4px 0 8px;font-size:15px}
+.c .a{display:flex;gap:6px;font-size:12px;color:var(--mute)}
+.c .a button{font:inherit;font-size:12px;border:1px solid var(--line);background:#fff;color:var(--sub);padding:2px 8px;cursor:pointer}
+.c .a button[aria-pressed="true"]{color:var(--red);border-color:var(--red)}
+.c.re{padding-left:18px;background:#fafafa}
+.more{display:block;text-align:center;font-size:13px;border:1px solid var(--line);padding:10px;margin:10px 0 0;color:var(--sub)}
+.rank{list-style:none;margin:0;padding:0}
+.rank li{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line2);font-size:15px;line-height:1.4}
+.rank .no{font-weight:900;font-size:17px;width:20px;flex:none;color:var(--red);font-style:italic}
+.rank li:nth-child(n+4) .no{color:#999}
+.thumb{width:72px;height:48px;flex:none;margin-left:auto}
+.t1{background:linear-gradient(135deg,#7a8794,#c9d1d8)}.t2{background:linear-gradient(135deg,#9a7b5b,#e1cfb4)}.t3{background:linear-gradient(135deg,#536b5a,#b8c9b6)}
+.next{display:flex;justify-content:space-between;gap:10px;font-size:14px;border:1px solid var(--line);padding:12px;margin-top:16px}
+.next span:first-child{color:var(--mute);flex:none}
+footer{background:#333;color:#aaa;font-size:11px;line-height:1.7;margin-top:30px}
+footer .in{padding-block:18px 26px}
+footer b{color:#fff;font-size:13px}
+button:focus-visible,textarea:focus-visible{outline:2px solid var(--navy);outline-offset:1px}
+</style>
+
+<div class="util"><div class="in"><div><span>2026년 11월 10일 화요일</span></div><div><span>로그인</span><span>회원가입</span><span>구독신청</span></div></div></div>
+<div class="top"><div class="in"><div class="logo">학점<b>일보</b></div><div class="r">교육전문 가상신문<br>제2학기 제2차 수행호</div></div></div>
+<nav class="gnb" aria-label="메뉴"><div class="in"><span>전체</span><span>정책</span><span class="on">교육</span><span>입시</span><span>학교</span><span>오피니언</span><span>포토</span></div></nav>
+
+<main class="in">
+  <div class="crumb">홈 &gt; 교육 &gt; <b>고교학점제</b></div>
+  <h1>"원하는 과목 있다" 학생 58%뿐… 고교학점제 선택권, 숫자로 따져보니</h1>
+  <div class="subt">내신 유불리 따지는 학생 45%<br>교육부 "5등급제로 경쟁 줄 것"… 9개 과목 빼곤 상대평가 그대로</div>
+  <div class="meta">
+    <span>김학점 기자 · 입력 2026.11.10 07:18 · 수정 2026.11.10 14:36</span>
+    <span class="tools"><button type="button" id="fs" aria-label="글자 작게">가-</button><button type="button" id="fl" aria-label="글자 크게">가+</button></span>
+  </div>
+  <p class="warn">※ 독서와 작문 수행평가 공부용으로 만든 가상 기사입니다. 인용 출처로 쓸 수 없으며, 자료별 원문 출처는 본문에 있습니다.</p>
+
+  <div id="body">
+    <p>고교학점제가 학생의 선택권을 실질적으로 보장하는지를 두고 근거 자료 6건을 모아 하나씩 따져봤다. 자료마다 내용, 매체, 출처, 적절성 평가 순으로 정리하고, 이를 바탕으로 짠 글의 개요를 함께 실었다.</p>
+
+    <div class="part">문제 3. 근거 적절성 평가</div>
+
+    <div class="blk"><h3>■ 자료 1</h3>
+      <p>- 내용: 과목 선택 요인으로 진로 70.7%, 내신 유불리 45.0%</p>
+      <p>- 매체: 설문 통계</p>
+      <p>- 출처: 교원 3단체, 고등학생 1,670명 대상 설문조사, 2025 (제시문 (나) 재인용)</p>
+      <p>- 적절성 평가: 조사한 학생 수가 많고 숫자가 분명해서 믿을 만하다. 하지만 교원단체가 한 조사라서 한쪽 입장이 들어갔을 수 있다.</p>
+    </div>
+
+    <div class="blk"><h3>■ 자료 2</h3>
+      <p>- 내용: 일반고 평균 개설 과목 28.6개, 소규모교는 25.8개, 인천은 10.5개 차이</p>
+      <p>- 매체: 공공 통계</p>
+      <p>- 출처: 교육부, 국회 제출 자료, 2026 (제시문 (나) 재인용)</p>
+      <p>- 적절성 평가: 정부가 낸 통계이고 최근 자료라 믿을 만하다. 학교마다 과목 수가 얼마나 차이 나는지 숫자로 바로 보여 준다.</p>
+    </div>
+
+    <div class="mid-ad"><div class="lbl">AD</div>
+      <div class="bn bn1"><strong>공강 시간 3시간,<br>도서관 창가석 선착순</strong><em>자리 맡기 &gt;</em></div>
+    </div>
+
+    <div class="blk"><h3>■ 자료 3</h3>
+      <p>- 내용: "원하는 과목이 충분히 개설됨"에 학생 58.3%, 교사 79.1% 긍정</p>
+      <p>- 매체: 설문 통계</p>
+      <p>- 출처: 한국교육과정평가원, 고교학점제 교육과정 영역 인식 조사, 2025 (제시문 (다)①)</p>
+      <p>- 적절성 평가: 국가 연구기관이 만 명 넘게 조사해서 믿을 만하다. 그런데 같은 조사에서 "자유롭게 고를 수 있다"고 답한 학생은 74.4%였다. 내 주장에 유리한 숫자만 쓰면 안 되니까 두 숫자를 같이 써야 한다.</p>
+    </div>
+
+    <div class="blk"><h3>■ 자료 4</h3>
+      <p>- 내용: 교원노조가 고교학점제 폐지를 요구함</p>
+      <p>- 매체: 방송 기사</p>
+      <p>- 출처: KBS 뉴스, 2025.9.19. (제시문 (다)③)</p>
+      <p>- 적절성 평가: 교사노조는 이 제도와 직접 관련된 쪽이라 한쪽 주장일 수 있다. 근거로 쓰기보다는 반대하는 목소리가 있다는 정도로만 쓴다.</p>
+    </div>
+
+    <div class="blk"><h3>■ 자료 5 [추가]</h3>
+      <p>- 내용: 내신이 9등급에서 5등급으로 바뀌고, 절대평가와 상대평가 점수를 같이 적는다. 사회·과학 9개 과목만 상대평가 등급을 안 적는다. 교육부는 이렇게 하면 경쟁과 사교육이 줄 거라고 본다.</p>
+      <p>- 매체: 정부 보도자료</p>
+      <p>- 출처: 교육부, 「2028 입시부터 국어·수학·사회·과학 선택과목 없는 통합형 수능, 내신 5등급 체제 확정」, 교육부, 2023.12.27., <a href="https://eiec.kdi.re.kr/policy/materialView.do?num=246533" target="_blank" rel="noopener">https://eiec.kdi.re.kr/policy/materialView.do?num=246533</a></p>
+      <p>- 적절성 평가: 제도를 만든 교육부의 원래 자료라 내용은 가장 정확하다. 하지만 정부가 제도를 알리려고 만든 자료라 문제점은 잘 나오지 않는다. "경쟁이 줄 것"이라는 말도 아직 확인된 결과가 아니라 정부의 기대일 뿐이다. 그래도 대부분 과목이 상대평가라는 사실은 내 주장의 근거로 쓸 수 있다.</p>
+    </div>
+
+    <div class="mid-ad"><div class="lbl">AD</div>
+      <div class="bn bn2"><div><strong>마송분식 수행평가 주간 이벤트</strong><small>떡볶이+김밥 세트 학생증 제시 시</small></div><i>-1,000원</i></div>
+    </div>
+
+    <div class="blk"><h3>■ 자료 6 [추가]</h3>
+      <p>- 내용: 상대평가와 절대평가를 같이 하면서 과목 선택권을 보장한다는 취지가 약해질 수 있다는 걱정. 2025년 고1부터 5등급제가 적용되고, 1등급은 4%에서 10%로 늘었다.</p>
+      <p>- 매체: 인터넷 기사</p>
+      <p>- 출처: 뉴시스, 「올해 신입생부터 고교 현장 격변…1등급 4→10%」, 2025.1.3., <a href="https://www.newsis.com/view/NISX20250102_0003019022" target="_blank" rel="noopener">https://www.newsis.com/view/NISX20250102_0003019022</a></p>
+      <p>- 적절성 평가: 교육부 발표를 바탕으로 쓴 기사라 사실은 정확하다. 다만 누가 걱정하는지 "교육계"라고만 해서 근거로는 좀 약하다.</p>
+    </div>
+
+    <div class="part">문제 4. 개요</div>
+
+    <div class="blk"><h3>■ 서론</h3>
+      <p>- 고교학점제는 학생이 원하는 과목을 고르게 하려는 제도다.</p>
+      <p>- 문제 제기: 제도상 기회와 실제로 고를 수 있는 것은 다르다.</p>
+      <p>- 주장: 고교학점제는 선택 기회는 넓혔지만, 입시 부담과 학교 간 격차 때문에 선택권을 실질적으로 보장하지 못한다.</p>
+    </div>
+
+    <div class="blk"><h3>■ 본론</h3>
+      <p>1. 입시가 선택을 좌우한다: 내신 유불리를 따지는 학생이 45.0%다. 2028 대입에서도 9개 과목을 빼면 상대평가라 등급 부담이 남는다. (자료 1, 5)</p>
+      <p>2. 학교마다 선택지가 다르다: 소규모 학교는 개설 과목이 3.5개 적고, 인천은 10.5개 차이 난다. 원하는 과목이 충분하다는 학생은 58.3%로 교사(79.1%)보다 20.8%p 낮다. (자료 2, 3)</p>
+      <p>3. 선택을 돕는 안내가 부족하다: 학생·학부모를 위한 과목 선택 안내가 낮게 평가됐다. (제시문 (나))</p>
+      <p>4. 예상 반론과 반박</p>
+      <p>&nbsp;&nbsp;- 반론①: 학생 74.4%가 자유롭게 고른다고 했다. → 반박: 열린 과목 안에서만 자유롭다. 원하는 과목이 열려 있다는 학생은 58.3%뿐이다.</p>
+      <p>&nbsp;&nbsp;- 반론②: 공동·온라인 수업으로 과목이 늘었다. → 반박: 2026년 자료에도 격차가 남아 있다. 보완책일 뿐 해결책은 아니다.</p>
+      <p>&nbsp;&nbsp;- 반론③: 사회·과학 융합선택은 절대평가다. → 반박: 9개 과목뿐이고 나머지는 상대평가라 부담은 그대로다.</p>
+    </div>
+
+    <div class="blk"><h3>■ 결론</h3>
+      <p>- 요약: 선택권은 겉으로는 넓어졌지만 실제로는 보장되지 않는다.</p>
+      <p>- 제언: 절대평가 확대, 소규모 학교 지원, 진로 상담 강화가 필요하다.</p>
+      <p>- 마무리: 2028 대입 첫 학생인 나도 과목을 고를 때 등급부터 본다.</p>
+    </div>
+  </div>
+
+  <div class="byend">김학점 기자</div>
+  <div class="copy">저작권자 © 학점일보(가상) 무단전재 및 재배포 금지</div>
+  <div class="share"><span>카카오톡</span><span>페이스북</span><span>X</span><span>URL복사</span></div>
+
+  <div class="likes">
+    <button type="button" aria-pressed="false" data-n="31">좋아요 <span>31</span></button>
+    <button type="button" aria-pressed="false" data-n="74">공감돼요 <span>74</span></button>
+    <button type="button" aria-pressed="false" data-n="9">후속기사 원해요 <span>9</span></button>
+  </div>
+
+  <section class="sec" aria-labelledby="ct">
+    <h2 id="ct">댓글 <b id="cn">5</b></h2>
+    <div class="sort"><b>순공감순</b> · 최신순 · 공감비율순</div>
+    <form class="cin" id="cf"><textarea id="ctx" maxlength="300" placeholder="댓글을 입력하세요"></textarea><button type="submit">등록</button></form>
+    <div class="chint">이 기기에서만 저장됩니다</div>
+    <div id="cl">
+      <div class="c"><div class="w">sm****<span>2026.11.10 09:12</span></div><p>74%가 자유롭게 고른다는데 열린 과목 안에서 고르는 거잖아요. 우리 학교도 기하 신청자 적어서 폐강됨</p><div class="a"><button type="button" aria-pressed="false" data-n="148">공감 <span>148</span></button><button type="button" aria-pressed="false" data-n="6">비공감 <span>6</span></button></div></div>
+      <div class="c"><div class="w">jinro_****<span>2026.11.10 10:03</span></div><p>진로대로 듣고 싶어도 등급 깔아줄까 봐 다들 눈치봄. 45%면 솔직히 적게 나온 듯</p><div class="a"><button type="button" aria-pressed="false" data-n="97">공감 <span>97</span></button><button type="button" aria-pressed="false" data-n="11">비공감 <span>11</span></button></div></div>
+      <div class="c"><div class="w">ha***<span>2026.11.10 11:40</span></div><p>그래도 사회·과학 융합선택은 절대평가로 바뀌었으니 아예 안 바뀐 건 아니지 않나</p><div class="a"><button type="button" aria-pressed="false" data-n="23">공감 <span>23</span></button><button type="button" aria-pressed="false" data-n="15">비공감 <span>15</span></button></div></div>
+      <div class="c re"><div class="w">ㄴ 2dd****<span>2026.11.10 11:52</span></div><p>그거 9과목뿐이고 나머지는 다 상대평가예요</p><div class="a"><button type="button" aria-pressed="false" data-n="41">공감 <span>41</span></button><button type="button" aria-pressed="false" data-n="2">비공감 <span>2</span></button></div></div>
+      <div class="c"><div class="w">mas****<span>2026.11.10 13:21</span></div><p>교원단체 설문이랑 노조 성명은 좀 걸러서 봐야 할 듯</p><div class="a"><button type="button" aria-pressed="false" data-n="18">공감 <span>18</span></button><button type="button" aria-pressed="false" data-n="4">비공감 <span>4</span></button></div></div>
+    </div>
+    <span class="more">댓글 더보기 ∨</span>
+  </section>
+
+  <div class="next"><span>다음기사</span><span>소규모 학교 공동교육과정, 이동 시간은 누가 보상하나</span></div>
+
+  <section class="sec" style="margin-top:24px" aria-labelledby="rk">
+    <h2 id="rk">많이 본 뉴스</h2>
+    <ol class="rank">
+      <li><span class="no">1</span><span>"과목만 많으면 무슨 소용" 교사들 정부청사 앞 피켓</span><span class="thumb t1"></span></li>
+      <li><span class="no">2</span><span>2028 수능, 문·이과 없이 통합사회·통합과학 응시</span><span class="thumb t2"></span></li>
+      <li><span class="no">3</span><span>내신 1등급 10% 시대… '올 1등급' 의미 달라져</span><span class="thumb t3"></span></li>
+      <li><span class="no">4</span><span>수행평가 AI 금지… "구글 문서 창 벗어나지 마시오"</span></li>
+      <li><span class="no">5</span><span>독서와 작문 논증글, 서론·본론·결론 단락 구분이 관건</span></li>
+    </ol>
+  </section>
+</main>
+
+<footer><div class="in"><b>학점일보</b><br>교육 전문 가상신문 · 독서와 작문 수행평가 학습용<br>실제 언론사가 아니며 기사 속 기자·댓글·광고는 모두 가상입니다.</div></footer>
+
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('.likes button,.c .a button'); if(!b) return;
+  var on=b.getAttribute('aria-pressed')==='true', n=parseInt(b.dataset.n,10);
+  b.setAttribute('aria-pressed',on?'false':'true');
+  b.querySelector('span').textContent=on?n:n+1;
+});
+var body=document.getElementById('body');
+document.getElementById('fs').onclick=function(){body.classList.remove('l');body.classList.toggle('s');};
+document.getElementById('fl').onclick=function(){body.classList.remove('s');body.classList.toggle('l');};
+var K='hakjum-c2';
+function ld(){try{return JSON.parse(localStorage.getItem(K)||'[]')}catch(e){return[]}}
+function sv(a){try{localStorage.setItem(K,JSON.stringify(a))}catch(e){}}
+var mine=ld();
+function add(t){
+  var d=document.createElement('div');d.className='c';
+  var w=document.createElement('div');w.className='w';w.textContent='나';
+  var s=document.createElement('span');s.textContent='방금';w.appendChild(s);
+  var p=document.createElement('p');p.textContent=t;
+  var a=document.createElement('div');a.className='a';
+  a.innerHTML='<button type="button" aria-pressed="false" data-n="0">공감 <span>0</span></button><button type="button" aria-pressed="false" data-n="0">비공감 <span>0</span></button>';
+  d.append(w,p,a);document.getElementById('cl').prepend(d);
+}
+mine.forEach(add);
+function cnt(){document.getElementById('cn').textContent=5+mine.length}
+cnt();
+document.getElementById('cf').addEventListener('submit',function(e){
+  e.preventDefault();var x=document.getElementById('ctx'),t=x.value.trim();if(!t)return;
+  mine.push(t);sv(mine);add(t);x.value='';cnt();
+});
+</script>
